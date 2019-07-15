@@ -1,0 +1,45 @@
+  {% extends 'base.html.twig' %}
+  {# {% form_theme formEmp 'bootstrap_4_layout.html.twig' %} #}
+
+{% block body %}
+<center><h3>Listes des Employés de la SONATEL-ACADEMY</h3></center>
+<table  class="table">
+  <thead>
+  <tr>
+      <th scope="col">Matricule</th>
+      <th scope="col">Nom_Compet</th>
+      <th scope="col">Date-Naissance</th>
+      <th scope="col">Salaire</th>
+      <th scope="col">Service</th>
+      <th scope="col">SUPPRIMER</th>
+      <th scope="col">MODIFIER</th>
+    </tr>
+      </thead>
+      <tbody>
+      {% for employer in employers %}
+      <tr>
+      <td>{{employer. matricule}}</td>
+      <td>{{employer.nomComplet}}</td>
+      <td>{{employer.datenaissance | date('d/m/y')}}</td>
+      <td>{{employer.salaire}}Fcf</td>
+      <td>{{employer.service.libele}}</td>
+      <td>
+      <button class="btn btn-danger">
+      <a href="/page/{{employer.id}}/delete">SUPPRIMER</a>
+      </button>
+      </td>
+      <td>
+      <button class="btn btn-primary">
+      <a href="{{path('edit',{id:employer.id})}}">MODIFIER</a>
+      </button>
+      </td>
+
+  </tr>
+  
+   {% endfor %} 
+  
+  </tbody>
+</table>
+
+
+{% endblock %}

@@ -1,0 +1,41 @@
+  {% extends 'base.html.twig' %}
+
+{% block body %}
+<style>
+  :root {
+  --orange: hsl(26, 92%, 50%);
+  --orange-dark: hsl(26, 98%, 41%);
+  --dark-dark-blue: hsl(245, 66%, 23%);
+}
+
+#title {
+  margin: .5rem 0;
+  font-size: 4rem;
+  text-align: center;
+  color: var(--orange);
+  font-family: 'Lato', sans-serif;
+  text-shadow: 1px 1px 0 var(--dark-dark-blue),
+              2px 2px 0 var(--dark-dark-blue),
+              3px 3px 0 var(--dark-dark-blue),
+              4px 4px 0 var(--dark-dark-blue),
+              5px 5px 0 var(--orange-dark),
+              6px 6px 0 var(--orange-dark),
+              7px 7px 0 var(--orange-dark),
+              8px 8px 0 var(--orange-dark),
+              9px 9px 0 var(--dark-dark-blue),
+              10px 10px 0 var(--dark-dark-blue),
+              11px 11px 0 var(--dark-dark-blue);
+}
+
+</style>
+
+ <article>
+<br><br><br><br>
+  <h1 id="title">SONATEL_ACADEMY</h1>
+  
+</article>
+
+
+
+{% endblock %}
+ 
